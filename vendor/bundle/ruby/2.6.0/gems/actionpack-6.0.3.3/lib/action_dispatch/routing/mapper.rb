@@ -334,7 +334,7 @@ module ActionDispatch
             else
               unless path_params.include?(name)
                 message = "Missing :#{name} key on routes definition, please check your routes."
-                raise ArgumentError, message
+                                raise ArgumentError, message
               end
             end
             hash
