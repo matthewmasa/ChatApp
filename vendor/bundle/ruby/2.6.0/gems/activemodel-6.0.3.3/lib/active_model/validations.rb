@@ -155,7 +155,7 @@ module ActiveModel
         if args.all? { |arg| arg.is_a?(Symbol) }
           options.each_key do |k|
             unless VALID_OPTIONS_FOR_VALIDATE.include?(k)
-              raise ArgumentError.new("Unknown key: #{k.inspect}. Valid keys are: #{VALID_OPTIONS_FOR_VALIDATE.map(&:inspect).join(', ')}. Perhaps you meant to call `validates` instead of `validate`?")
+              raise ArgumentError.new("Unknown key: #{k.inspect}. Valid keys are: #{VALID_OPTIONS_FOR_VALIDATE.map(&:inspect).join(', ')}. Perhaps you meant to call `validates` instead of `validates`?")
             end
           end
         end
