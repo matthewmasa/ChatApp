@@ -12,6 +12,15 @@ class RoomsController < ApplicationController
     end
   end
 
+  def destroy
+    @room=Room.find_by(params[:id])
+    if @room.destroy
+      redirect_to root_path
+    else
+      render :index
+    end
+  end
+
   private
    def room_params
      params.require(:room).permit(:name,user_ids:[ ])
