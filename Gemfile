@@ -40,7 +40,6 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
-end
 
 group :test do
   # Adds support for Capybara system testing and selenium driver
@@ -54,3 +53,9 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'devise', '~> 4.7', '>= 4.7.2'
 gem 'pry-rails', '~> 0.3.9'
+end
+
+group :production do
+  gem 'rails_12factor', '~> 0.0.3'
+end
+
